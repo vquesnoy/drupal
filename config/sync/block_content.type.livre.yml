@@ -1,0 +1,8 @@
+uuid: 68685f97-1495-4ebd-8444-2f995cad5d9d
+langcode: en
+status: true
+dependencies: {  }
+id: livre
+label: Livre
+revision: false
+description: null

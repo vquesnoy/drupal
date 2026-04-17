@@ -1,0 +1,23 @@
+uuid: d3e4ddc8-d538-43fa-a010-9bcb65999214
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.livre
+    - field.storage.block_content.field_annee_publication
+id: block_content.livre.field_annee_publication
+field_name: field_annee_publication
+entity_type: block_content
+bundle: livre
+label: 'Annee Publication'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1100
+  max: 9999
+  prefix: ''
+  suffix: ''
+field_type: integer

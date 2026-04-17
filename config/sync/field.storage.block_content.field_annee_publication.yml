@@ -1,0 +1,20 @@
+uuid: 1be1899f-8a42-4310-a60e-b0c44c5c4790
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_annee_publication
+field_name: field_annee_publication
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

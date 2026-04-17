@@ -1,0 +1,48 @@
+uuid: f056ffea-2293-4d80-8f6a-b94ec3ff73e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.livre
+    - field.field.block_content.livre.field_annee_publication
+    - field.field.block_content.livre.field_auteur
+    - field.field.block_content.livre.field_isbn
+    - field.field.block_content.livre.field_resume
+id: block_content.livre.default
+targetEntityType: block_content
+bundle: livre
+mode: default
+content:
+  field_annee_publication:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_auteur:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_isbn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_resume:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

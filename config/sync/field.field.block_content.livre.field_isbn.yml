@@ -1,0 +1,19 @@
+uuid: 8de6f0fc-ee73-4bf0-b01b-c0f855f333db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.livre
+    - field.storage.block_content.field_isbn
+id: block_content.livre.field_isbn
+field_name: field_isbn
+entity_type: block_content
+bundle: livre
+label: ISBN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
