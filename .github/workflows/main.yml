@@ -2,9 +2,12 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [masster]
   pull_request:
-    branches: [main]
+    branches: [master]
+env:
+  APP_NAME: mon-application
+  NODE_VERSION: '20'
 
 jobs:
 
@@ -31,11 +34,18 @@ jobs:
     needs: build
 
     steps:
-      - name: Checkout du code
-        uses: actions/checkout@v4
+      - name: Utiliser les variables
+        run: |
+          # $VAR pour les variables shell
+          echo "App : $APP_NAME"
+          echo "Node : $NODE_VERSION"
 
-      - name: Lancement des tests
-        run: echo "Tests en cours..."
+      - name: Variables automatiques de GitHub
+        run: |
+          # ${{ }} pour les contexts GitHub
+          echo "Branche : ${{ github.ref_name }}"
+          echo "Auteur  : ${{ github.actor }}"
+          echo "Commit  : ${{ github.sha }}"
 
   # ─────────────────────────────────────────
   # JOB 3 : Deploy
@@ -44,7 +54,7 @@ jobs:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Checkout du code
