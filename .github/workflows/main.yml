@@ -1,1 +1,22 @@
+# ① Nom du workflow (affiché dans GitHub)
+name: Mon premier workflow
 
+# ② Quand se déclenche-t-il ?
+on:
+  push:
+    branches:
+      - main
+
+# ③ Liste des jobs (tâches)
+jobs:
+
+  # ④ Nom du job (vous choisissez)
+  dire-bonjour:
+
+    # ⑤ Sur quelle machine tourner
+    runs-on: ubuntu-latest
+
+    # ⑥ Les étapes à exécuter
+    steps:
+      - name: Dire bonjour
+        run: echo "Bonjour le monde !"
