@@ -42,7 +42,6 @@ jobs:
 
       - name: Variables automatiques de GitHub
         run: |
-          
           echo "Branche : ${{ github.ref_name }}"
           echo "Auteur  : ${{ github.actor }}"
           echo "Commit  : ${{ github.sha }}"
