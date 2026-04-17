@@ -1,0 +1,84 @@
+# ============================================
+# DRUPAL - .gitignore
+# ============================================
+
+# ----- Composer -----
+# Dépendances reconstruites par `composer install`
+/vendor/
+
+# ----- Drupal Core & Contrib -----
+# Gérés par Composer, ne jamais versionner
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# ----- Fichiers générés par Drupal -----
+# Fichiers uploadés (images, docs, etc.)
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Config locale (spécifique à chaque environnement)
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+
+# Fichier settings.php si généré automatiquement
+# (décommenter si tu NE veux PAS le versionner)
+# /web/sites/*/settings.php
+
+# ----- Fichiers sensibles -----
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ----- Environnement de dev -----
+/.lando.local.yml
+/.ddev/.ddev-docker-compose-base.yaml
+/.ddev/.ddev-docker-compose-full.yaml
+
+# ----- IDE & éditeurs -----
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.buildpath
+
+# ----- Système d'exploitation -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- Logs & temporaires -----
+*.log
+/tmp/
+/logs/
+
+# ----- Tests & qualité -----
+/phpunit.xml
+/behat.yml
+/.phpunit.result.cache
+/coverage/
+/reports/
+
+# ----- Node (si thème avec compilation SCSS/JS) -----
+/node_modules/
+npm-debug.log
+yarn-error.log
+/web/themes/custom/*/node_modules/
+
+# ----- Backups & archives -----
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+/backups/
+/dumps/
+
+# ----- Drush -----
+/drush/Commands/contrib/
