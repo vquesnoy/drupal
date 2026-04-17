@@ -1,0 +1,23 @@
+uuid: 4ffe9a45-6e4e-407d-81aa-1c53c419baaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annee_books
+    - node.type.books
+id: node.books.field_annee_books
+field_name: field_annee_books
+entity_type: node
+bundle: books
+label: 'Annee Books'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

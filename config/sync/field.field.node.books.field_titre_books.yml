@@ -1,0 +1,19 @@
+uuid: 5e96ee44-0567-4454-9b6c-32b214f4c525
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_books
+    - node.type.books
+id: node.books.field_titre_books
+field_name: field_titre_books
+entity_type: node
+bundle: books
+label: 'Titre Books'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

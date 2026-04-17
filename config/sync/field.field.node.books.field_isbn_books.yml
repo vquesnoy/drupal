@@ -1,0 +1,19 @@
+uuid: 07a7d8f3-1da7-40bf-8836-54f061a1d01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_isbn_books
+    - node.type.books
+id: node.books.field_isbn_books
+field_name: field_isbn_books
+entity_type: node
+bundle: books
+label: 'ISBN Books'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

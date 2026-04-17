@@ -1,0 +1,20 @@
+uuid: 8066835e-6710-4caf-9ea4-83d312408b44
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_annee_books
+field_name: field_annee_books
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
