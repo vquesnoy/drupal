@@ -45,7 +45,6 @@ jobs:
           echo "Branche : ${{ github.ref_name }}"
           echo "Auteur  : ${{ github.actor }}"
           echo "Commit  : ${{ github.sha }}"
-
   # ─────────────────────────────────────────
   # JOB 3 : Deploy
   # ─────────────────────────────────────────
