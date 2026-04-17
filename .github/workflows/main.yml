@@ -1,22 +1,54 @@
-# ① Nom du workflow (affiché dans GitHub)
-name: Mon premier workflow
+name: CI/CD Pipeline
 
-# ② Quand se déclenche-t-il ?
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
-# ③ Liste des jobs (tâches)
 jobs:
 
-  # ④ Nom du job (vous choisissez)
-  dire-bonjour:
-
-    # ⑤ Sur quelle machine tourner
+  # ─────────────────────────────────────────
+  # JOB 1 : Build
+  # ─────────────────────────────────────────
+  build:
+    name: 🔨 Build
     runs-on: ubuntu-latest
 
-    # ⑥ Les étapes à exécuter
     steps:
-      - name: Dire bonjour
-        run: echo "Bonjour le monde !"
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Build de l'application
+        run: echo "Build en cours..."
+
+  # ─────────────────────────────────────────
+  # JOB 2 : Test
+  # ─────────────────────────────────────────
+  test:
+    name: 🧪 Test
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Lancement des tests
+        run: echo "Tests en cours..."
+
+  # ─────────────────────────────────────────
+  # JOB 3 : Deploy
+  # ─────────────────────────────────────────
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/master'
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Déploiement
+        run: echo "Déploiement en cours..."
