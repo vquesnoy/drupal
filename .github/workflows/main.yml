@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [masster]
+    branches: [master]
   pull_request:
     branches: [master]
 env:
@@ -47,7 +47,7 @@ jobs:
           echo "Commit  : ${{ github.sha }}"
   # ─────────────────────────────────────────
   # JOB 3 : Deploy
-  # ─────────────────────────────────────────
+  # ──────────────────────────────────────
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
