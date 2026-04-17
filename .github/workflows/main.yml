@@ -5,7 +5,7 @@ name: Mon premier workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 # ③ Liste des jobs (tâches)
 jobs:
